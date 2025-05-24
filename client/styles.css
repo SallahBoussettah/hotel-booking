@@ -1,0 +1,487 @@
+body {
+	font-family: "Inter", sans-serif;
+}
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+	gap: 15px;
+	margin: 24px;
+}
+.card {
+	width: auto;
+	height: auto;
+	border: 0.5px solid #eff6ff;
+	border-radius: 10px;
+	padding: 24px;
+	box-shadow: 0 0 0 1px #0e3f7e0a, 0 1px 1px -0.5px #2a33450a, 0 3px 3px -1.5px #2a33460a,
+		0 6px 6px -3px #2a33460a, 0 6px 8px -6px #0e3f7e0a, 0 4px 4px -12px #0e3f7e0a;
+}
+.card-id {
+	font-size: 20px;
+	font-weight: bold;
+}
+.card-title {
+	font-size: 32px;
+	font-weight: bold;
+	color: #2286f9;
+	margin-bottom: 40px;
+	margin-top: 0;
+}
+.card-header {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.price-btn {
+	font-size: 14px;
+	font-weight: 500;
+	background-color: #2286f9;
+	color: #fff;
+	padding: 10px 12px;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	text-transform: capitalize;
+	margin-top: 12px;
+}
+.flex {
+	display: flex;
+}
+.items-center {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+.flex-end {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+.flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.flex-between-end {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+}
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+.items-start {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+.green {
+	color: green;
+}
+.featues {
+	font-size: 12px;
+	font-weight: 500;
+	max-width: 210px;
+}
+.price {
+	font-size: 28px;
+	font-weight: bold;
+	color: #1d1d1d;
+	margin-top: 10px;
+}
+.mb-0 {
+	margin-bottom: 0;
+}
+.mt-0 {
+	margin-top: 0;
+}
+.w-full {
+	width: 100%;
+}
+.card-image {
+	width: 250px;
+	height: 250px;
+	min-width: 250px;
+	border-radius: 8px;
+	overflow: hidden;
+	margin-right: 32px;
+}
+.card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+p {
+	color: #4f4f4f;
+}
+h1,
+h2,
+h3,
+h4 {
+	color: #1d1d1d;
+}
+.search {
+	border-bottom: 1px solid #eff6ff;
+	padding-bottom: 24px;
+	margin-bottom: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	flex-direction: row;
+}
+.input-group {
+	padding: 10px;
+	font-size: 12px;
+}
+.input-group label {
+	display: block;
+	margin-bottom: 5px;
+}
+.container-bk {
+	padding: 24px;
+}
+.input-bk {
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	padding: 8px 12px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #1d1d1d;
+	background-color: #fff;
+}
+
+button {
+	background: #21364b;
+	border-radius: 8px;
+	color: white;
+	border: 0;
+	padding: 12px 16px;
+	margin-top: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	display: inline-block;
+}
+#loader {
+	display: none;
+	background-color: yellow;
+	padding: 10px;
+	text-align: center;
+}
+#rates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between cards */
+    padding: 20px;
+}
+
+.rate-card {
+    background: #f0f0f0; /* Light grey background */
+    border: 1px solid #ccc; /* Grey border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    width: 300px; /* Fixed width, but can be adjusted or made responsive */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.rate-card h4 {
+    color: #333; /* Dark grey color for text */
+    margin-bottom: 5px;
+}
+
+.rate-card p {
+    color: #666; /* Lighter text color for details */
+    margin: 5px 0;
+}
+
+.rate-card button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px; /* Rounded button edges */
+}
+.price-btn {
+    margin-top: 10px; 
+    margin-right: 10px; 
+}
+.price-btn {
+    display: inline-block;
+    background-color: #007bff; /* Example color */
+    color: white;
+    font-size: 16px; /* Ensures text size is sufficient */
+    /* text-align: center; Horizontally centers text */
+    text-decoration: none; /* Removes underline from links */
+    border: none;
+    border-radius: 5px; /* Rounded corners for aesthetics */
+    cursor: pointer; /* Makes it clear it's clickable */
+    line-height: 1.5; /* Helps vertically center the text, adjust based on your font size and padding */
+    width: auto; /* Ensures the button width is based on content + padding */
+    box-sizing: border-box; /* Ensures padding is included in width/height calculations */
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-btn:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 0 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4f4f4f;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #f0f7ff;
+  color: #2286f9;
+}
+
+.nav-link.active {
+  background-color: #2286f9;
+  color: white;
+}
+
+/* AI Assistant Styles */
+.ai-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-section {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 0 0 1px #0e3f7e0a, 0 1px 1px -0.5px #2a33450a, 0 3px 3px -1.5px #2a33460a,
+    0 6px 6px -3px #2a33460a, 0 6px 8px -6px #0e3f7e0a, 0 4px 4px -12px #0e3f7e0a;
+}
+
+.ai-section h2 {
+  color: #2286f9;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.ai-section p {
+  margin-bottom: 20px;
+}
+
+.response-container {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #eff6ff;
+}
+
+.response-container h3 {
+  margin-top: 0;
+  color: #2286f9;
+  font-size: 18px;
+}
+
+.response-content {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Loader */
+#loader {
+  background-color: rgba(34, 134, 249, 0.1);
+  color: #2286f9;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 20px auto;
+  max-width: 200px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .ai-container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ai-section {
+    padding: 16px;
+  }
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+  color: #b71c1c;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.error-message strong {
+  font-weight: 600;
+}
+
+/* Funny Search Page Styles */
+.search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.search-intro {
+  background-color: #f0f7ff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  border-left: 4px solid #2286f9;
+}
+
+.search-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.humor-container {
+  background-color: #fff8e1;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-left: 4px solid #ffc107;
+}
+
+.humor-content {
+  font-size: 16px;
+  line-height: 1.6;
+  font-style: italic;
+  color: #333;
+}
+
+.hotel-results {
+  margin-top: 30px;
+}
+
+.hotels-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.hotel-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.hotel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hotel-card:hover .hotel-image img {
+  transform: scale(1.05);
+}
+
+.hotel-info {
+  padding: 15px;
+}
+
+.hotel-name {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #2286f9;
+}
+
+.hotel-address {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.hotel-rating {
+  color: #ffc107;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.hotel-price {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hotels-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .search-form-container {
+    flex-direction: column;
+  }
+}
+
+.no-results {
+  text-align: center;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  color: #666;
+  font-style: italic;
+  margin: 20px 0;
+  border: 1px dashed #ccc;
+}

@@ -1,0 +1,262 @@
+/* Swiper Styles */
+.swiper-card {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.swiper-card.swiping-left {
+    transform: translateX(-150%) rotate(-30deg);
+    opacity: 0;
+}
+
+.swiper-card.swiping-right {
+    transform: translateX(150%) rotate(30deg);
+    opacity: 0;
+}
+
+.swiper-card .hotel-image {
+    height: 65%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-card .hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-card .hotel-info {
+    padding: 15px;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.swiper-card .hotel-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.swiper-card .hotel-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.swiper-card .hotel-rating {
+    color: #ff9800;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.swiper-card .hotel-price {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.1rem;
+}
+
+.swipe-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.swipe-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.swipe-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.swipe-left {
+    background-color: #ff5252;
+    color: white;
+}
+
+.swipe-right {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.matches-container {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.matches-container h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.match-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.match-item:last-child {
+    border-bottom: none;
+}
+
+.match-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.match-item .match-info {
+    flex: 1;
+}
+
+.match-item h4 {
+    margin: 0;
+    color: #333;
+}
+
+.match-item p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid #4CAF50;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-content h3 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.modal-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-btn:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.no-hotels {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.no-hotels h2 {
+    color: #ff5252;
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    .swiper-card {
+        height: 450px;
+    }
+    
+    .swipe-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Animation for card transitions */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease forwards;
+} 
