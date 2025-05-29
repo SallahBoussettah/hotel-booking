@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Travel Assistant - Hotel Booking</title>
@@ -9,104 +8,107 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>AI Travel Assistant</h1>
     <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="ai-assistant.html" class="nav-link active">AI Assistant</a>
-        <a href="funny-search.html" class="nav-link">Funny Search</a>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="ai-assistant.html" class="nav-link active">AI Assistant</a>
+      <a href="funny-search.html" class="nav-link">Funny Search</a>
     </div>
 
     <div class="ai-container">
-        <div class="ai-section">
-            <h2>Travel Assistant</h2>
-            <p>Ask any travel-related question and get AI-powered answers.</p>
-            <div class="input-group">
-                <label for="ai-prompt">Your Question:</label>
-                <textarea id="ai-prompt" class="input-bk" rows="3" placeholder="E.g., What are the best times to visit Bali?"></textarea>
-            </div>
-            <button class="price-btn mt-0" onclick="getAIResponse()">Get Answer</button>
-            <div id="ai-response-container" class="response-container">
-                <h3>Response:</h3>
-                <div id="ai-response" class="response-content"></div>
-            </div>
+      <div class="ai-section">
+        <h2>Travel Assistant</h2>
+        <p>Ask any travel-related question and get AI-powered answers.</p>
+        <div class="input-group">
+          <label for="ai-prompt">Your Question:</label>
+          <textarea
+            id="ai-prompt"
+            class="input-bk"
+            rows="3"
+            placeholder="E.g., What are the best times to visit Bali?"></textarea>
         </div>
+        <button class="price-btn mt-0" onclick="getAIResponse()">Get Answer</button>
+        <div id="ai-response-container" class="response-container">
+          <h3>Response:</h3>
+          <div id="ai-response" class="response-content"></div>
+        </div>
+      </div>
 
-        <div class="ai-section">
-            <h2>Hotel Recommendations</h2>
-            <p>Get personalized hotel recommendations based on your preferences.</p>
-            <div class="input-group">
-                <label for="location">Destination:</label>
-                <input type="text" id="location" class="input-bk" placeholder="E.g., Paris, France" />
-            </div>
-            <div class="input-group">
-                <label for="budget">Budget per night ($):</label>
-                <input type="text" id="budget" class="input-bk" placeholder="E.g., 200" />
-            </div>
-            <div class="input-group">
-                <label for="purpose">Trip Purpose:</label>
-                <select id="purpose" class="input-bk">
-                    <option value="leisure">Leisure</option>
-                    <option value="business">Business</option>
-                    <option value="family">Family</option>
-                    <option value="romantic">Romantic</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label for="amenities">Desired Amenities (comma-separated):</label>
-                <input type="text" id="amenities" class="input-bk" placeholder="E.g., pool, spa, gym" />
-            </div>
-            <div class="input-group">
-                <label for="travelers">Number of Travelers:</label>
-                <input type="number" id="travelers" class="input-bk" min="1" value="2" />
-            </div>
-            <div class="input-group">
-                <label for="duration">Trip Duration (days):</label>
-                <input type="number" id="duration" class="input-bk" min="1" value="3" />
-            </div>
-            <button class="price-btn mt-0" onclick="getHotelRecommendations()">Get Recommendations</button>
-            <div id="recommendations-container" class="response-container">
-                <h3>Recommendations:</h3>
-                <div id="recommendations" class="response-content"></div>
-            </div>
+      <div class="ai-section">
+        <h2>Hotel Recommendations</h2>
+        <p>Get personalized hotel recommendations based on your preferences.</p>
+        <div class="input-group">
+          <label for="location">Destination:</label>
+          <input type="text" id="location" class="input-bk" placeholder="E.g., Paris, France" />
         </div>
+        <div class="input-group">
+          <label for="budget">Budget per night ($):</label>
+          <input type="text" id="budget" class="input-bk" placeholder="E.g., 200" />
+        </div>
+        <div class="input-group">
+          <label for="purpose">Trip Purpose:</label>
+          <select id="purpose" class="input-bk">
+            <option value="leisure">Leisure</option>
+            <option value="business">Business</option>
+            <option value="family">Family</option>
+            <option value="romantic">Romantic</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="amenities">Desired Amenities (comma-separated):</label>
+          <input type="text" id="amenities" class="input-bk" placeholder="E.g., pool, spa, gym" />
+        </div>
+        <div class="input-group">
+          <label for="travelers">Number of Travelers:</label>
+          <input type="number" id="travelers" class="input-bk" min="1" value="2" />
+        </div>
+        <div class="input-group">
+          <label for="duration">Trip Duration (days):</label>
+          <input type="number" id="duration" class="input-bk" min="1" value="3" />
+        </div>
+        <button class="price-btn mt-0" onclick="getHotelRecommendations()">Get Recommendations</button>
+        <div id="recommendations-container" class="response-container">
+          <h3>Recommendations:</h3>
+          <div id="recommendations" class="response-content"></div>
+        </div>
+      </div>
 
-        <div class="ai-section">
-            <h2>Travel Itinerary Generator</h2>
-            <p>Generate a detailed travel itinerary for your upcoming trip.</p>
-            <div class="input-group">
-                <label for="destination">Destination:</label>
-                <input type="text" id="destination" class="input-bk" placeholder="E.g., Tokyo, Japan" />
-            </div>
-            <div class="input-group">
-                <label for="trip-duration">Trip Duration (days):</label>
-                <input type="number" id="trip-duration" class="input-bk" min="1" value="3" />
-            </div>
-            <div class="input-group">
-                <label for="trip-travelers">Number of Travelers:</label>
-                <input type="text" id="trip-travelers" class="input-bk" placeholder="E.g., a couple, family of 4" />
-            </div>
-            <div class="input-group">
-                <label for="interests">Interests (comma-separated):</label>
-                <input type="text" id="interests" class="input-bk" placeholder="E.g., history, food, nature" />
-            </div>
-            <div class="input-group">
-                <label for="hotel-name">Hotel Name (if known):</label>
-                <input type="text" id="hotel-name" class="input-bk" placeholder="E.g., Hilton Tokyo" />
-            </div>
-            <button class="price-btn mt-0" onclick="generateItinerary()">Generate Itinerary</button>
-            <div id="itinerary-container" class="response-container">
-                <h3>Your Itinerary:</h3>
-                <div id="itinerary" class="response-content"></div>
-            </div>
+      <div class="ai-section">
+        <h2>Travel Itinerary Generator</h2>
+        <p>Generate a detailed travel itinerary for your upcoming trip.</p>
+        <div class="input-group">
+          <label for="destination">Destination:</label>
+          <input type="text" id="destination" class="input-bk" placeholder="E.g., Tokyo, Japan" />
         </div>
+        <div class="input-group">
+          <label for="trip-duration">Trip Duration (days):</label>
+          <input type="number" id="trip-duration" class="input-bk" min="1" value="3" />
+        </div>
+        <div class="input-group">
+          <label for="trip-travelers">Number of Travelers:</label>
+          <input type="text" id="trip-travelers" class="input-bk" placeholder="E.g., a couple, family of 4" />
+        </div>
+        <div class="input-group">
+          <label for="interests">Interests (comma-separated):</label>
+          <input type="text" id="interests" class="input-bk" placeholder="E.g., history, food, nature" />
+        </div>
+        <div class="input-group">
+          <label for="hotel-name">Hotel Name (if known):</label>
+          <input type="text" id="hotel-name" class="input-bk" placeholder="E.g., Hilton Tokyo" />
+        </div>
+        <button class="price-btn mt-0" onclick="generateItinerary()">Generate Itinerary</button>
+        <div id="itinerary-container" class="response-container">
+          <h3>Your Itinerary:</h3>
+          <div id="itinerary" class="response-content"></div>
+        </div>
+      </div>
     </div>
 
     <div id="loader" class="hidden">Loading... Please wait.</div>
 
     <script src="ai-assistant.js"></script>
-</body>
-
-</html> 
+  </body>
+</html>

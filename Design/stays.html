@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>StayFinder - Stays</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../client/components/components.js"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .active-nav-link {
+          @apply text-[#2ab6ed] border-b-2 border-[#2ab6ed];
+        }
+        .nav-link {
+          @apply text-[#111618] hover:text-[#2ab6ed] transition-colors duration-200 pb-1;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white" style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Navbar component placeholder -->
+        <div data-component="navbar"></div>
+        
+        <main class="px-40 flex flex-1 justify-center py-8 bg-slate-50">
+          <div class="layout-content-container flex flex-col max-w-[1024px] flex-1">
+            <div class="p-6 bg-white rounded-xl shadow-lg mb-8">
+              <h1 class="text-3xl font-bold text-slate-800 mb-2">Book your perfect stay</h1>
+              <p class="text-slate-600 mb-6">Find deals on hotels, homes, and much more...</p>
+              <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_auto] gap-4 items-end">
+                <label class="flex flex-col">
+                  <span class="text-sm font-medium text-slate-700 mb-1">Destination</span>
+                  <div
+                    class="flex items-center w-full rounded-lg border border-slate-300 bg-white h-12 focus-within:ring-2 focus-within:ring-[#2ab6ed] focus-within:border-[#2ab6ed] transition-all duration-200">
+                    <div class="text-slate-500 flex items-center justify-center pl-3 pr-2">
+                      <svg
+                        fill="currentColor"
+                        height="20px"
+                        viewBox="0 0 256 256"
+                        width="20px"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,34.75,22.86,72.32,82.63,113.66a8,8,0,0,0,10.74,0C193.14,212.32,216,174.75,216,112A88.1,88.1,0,0,0,128,16Zm0,206.37C84.7,183.8,40,145.42,40,112a88,88,0,0,1,176,0C216,145.42,171.3,183.8,128,222.37Z"></path>
+                      </svg>
+                    </div>
+                    <input
+                      class="form-input flex-1 w-full min-w-0 resize-none overflow-hidden rounded-r-lg text-slate-800 focus:outline-none border-none bg-transparent h-full placeholder:text-slate-400 text-base font-normal leading-normal"
+                      placeholder="e.g. New York, Paris"
+                      value="" />
+                  </div>
+                </label>
+                <label class="flex flex-col">
+                  <span class="text-sm font-medium text-slate-700 mb-1">Check-in / Check-out</span>
+                  <div
+                    class="flex items-center w-full rounded-lg border border-slate-300 bg-white h-12 focus-within:ring-2 focus-within:ring-[#2ab6ed] focus-within:border-[#2ab6ed] transition-all duration-200">
+                    <div class="text-slate-500 flex items-center justify-center pl-3 pr-2">
+                      <svg
+                        fill="currentColor"
+                        height="20px"
+                        viewBox="0 0 256 256"
+                        width="20px"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM48,48H72v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48Zm160,160H48V96H208Z"></path>
+                      </svg>
+                    </div>
+                    <input
+                      class="form-input flex-1 w-full min-w-0 resize-none overflow-hidden rounded-r-lg text-slate-800 focus:outline-none border-none bg-transparent h-full placeholder:text-slate-400 text-base font-normal leading-normal"
+                      placeholder="Select dates"
+                      type="text" />
+                  </div>
+                </label>
+                <label class="flex flex-col">
+                  <span class="text-sm font-medium text-slate-700 mb-1">Guests</span>
+                  <div
+                    class="flex items-center w-full rounded-lg border border-slate-300 bg-white h-12 focus-within:ring-2 focus-within:ring-[#2ab6ed] focus-within:border-[#2ab6ed] transition-all duration-200">
+                    <div class="text-slate-500 flex items-center justify-center pl-3 pr-2">
+                      <svg
+                        fill="currentColor"
+                        height="20px"
+                        viewBox="0 0 256 256"
+                        width="20px"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                      </svg>
+                    </div>
+                    <input
+                      class="form-input flex-1 w-full min-w-0 resize-none overflow-hidden rounded-r-lg text-slate-800 focus:outline-none border-none bg-transparent h-full placeholder:text-slate-400 text-base font-normal leading-normal"
+                      placeholder="e.g. 2 adults, 1 child"
+                      value="" />
+                  </div>
+                </label>
+                <button
+                  class="bg-[#2ab6ed] hover:bg-[#22a3d6] text-white font-bold h-12 px-8 rounded-lg text-base transition-colors duration-200 shadow-md hover:shadow-lg mt-5 md:mt-0">
+                  Search
+                </button>
+              </div>
+            </div>
+            <section class="mb-10">
+              <h2 class="text-2xl font-bold text-slate-800 px-4 pb-2 pt-5">Featured Destinations</h2>
+              <p class="text-slate-600 px-4 pb-5">Explore top cities around the world.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+                <div
+                  class="flex flex-col gap-3 pb-3 bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcafZW_J3fvYcZlY7QDA0xuN2TQ2zWXQxxPvtziUJUDBhgCeXgpoF3HqanEcMekiJ-wYKYrIMndYEQVYrnNdy0k9P3l1EFqDf4xuVJzonfhKzWnC3D1EjOijk_qOblNg5T76FQJKb8L_O2t1HYf2M9Ph7f1ysTSZaHcyxhB3WwNw6WpmUm9qx7w-9wAve6hKgzDwvheFveoW0i6gOJgA05gsqnNeL8iLa-FBNrQLKk6sszdza6svcbzmJ24JTu9NiImpXL6PLzA63C');
+                    "></div>
+                  <div class="p-4">
+                    <h3 class="text-slate-800 text-lg font-semibold leading-normal">Paris</h3>
+                    <p class="text-slate-600 text-sm font-normal leading-normal">Romantic city with iconic landmarks</p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 pb-3 bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpw2F9PQoo7_R84ULIJT8SzxRUP9I_fmVUmybboiCFVfVK95PucfF4ie1AsocJg5FjTuMTS5FK0xMHHEoqztOMBB3BBJgVQ-hFgsF6IL7XnM0owALUmSSH9TIgqF3Jbn5u4dVRtx0BKfg_NcwHfEzEqaUszbaRpNfZNkajYe_K6pGUq3WrMKiRnu3G9Lxg956NF_rWzv3WDc4X6ekubwYYEthW20MI5SFbNC_Q2w0tLvBhg3wrLTMniW08H1PWBtdR0kmI66xoDApU');
+                    "></div>
+                  <div class="p-4">
+                    <h3 class="text-slate-800 text-lg font-semibold leading-normal">London</h3>
+                    <p class="text-slate-600 text-sm font-normal leading-normal">Historic city with rich culture</p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 pb-3 bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeagOd0y5lYpjhhacxQue4b9F70TEls2mWdcKaXEOmuG2zM6oL25xV85h7048Z0E3_Pabcb2WVv_nfUnRTCPPdpmDfoEdJZtjWoFLUvhMpRdooAkBn7sVELCWhkPdHt_mhX8bWkj9wV6Sg-SasPCQKlWivEavP1l0laP-821XXtC6cfl0i7TTOiaOwxomBywgl6CiDK5kHwtjhCGjLA0S7m4Vbdib-1Bj2PHewozWGIIDF319yTF86RJ656iI9ZiWcFyrKkm0YINqg');
+                    "></div>
+                  <div class="p-4">
+                    <h3 class="text-slate-800 text-lg font-semibold leading-normal">New York</h3>
+                    <p class="text-slate-600 text-sm font-normal leading-normal">
+                      Vibrant city with diverse attractions
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 pb-3 bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBhqJb8M8aVK9niLWhGgBWIHliqU35IrFPIk72DSf2SNhL0Qm_T10UYAiqbk7YA_-GdlRlI_-3OsyrAl6wput9Ha3er8r965SNLXAj0pEiy8lHZho56rpSWfG9o-Ntlsdf0nZ7gDcYMBNb8awxmHHzCxfpFWvSsZCUP0x1JG0kOwfBRQUMBwLSoOXVWt-RsSlZ1j3S-lAzGL1fd9Av1e2xPM-FAC2D_qGh17W4fHB61lXkuPKX-Wj6JfhWc2rMwb3-JN-ZVxC5D689');
+                    "></div>
+                  <div class="p-4">
+                    <h3 class="text-slate-800 text-lg font-semibold leading-normal">Rome</h3>
+                    <p class="text-slate-600 text-sm font-normal leading-normal">
+                      Ancient city with stunning architecture
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 pb-3 bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxvKUVTtAl3RvVgBHCbxPcCAGLvUyg60BmanHk2adb6URzyfaZtMY3rFQ9lMjpZhyWx9kJIM6lP5jmI0KzK4X8ZEbMlG5dj5k26pUpjHzf7eYujSFyHvhsLgFL7d-vXyaJ9rrbsoJoC31ytyNs-B4iMoN8wzy7qUCc5Bt4XdpvNgqyx4eW_ctODfr2U3kSGY1o_2cmsy04WDvlTo4Em0BP2RqAy_1tZoYIbOIK3EPol-_GAW_sngTLkyGUBBZ1qg17kQo-yGAP6HJc');
+                    "></div>
+                  <div class="p-4">
+                    <h3 class="text-slate-800 text-lg font-semibold leading-normal">Barcelona</h3>
+                    <p class="text-slate-600 text-sm font-normal leading-normal">Lively city with beautiful beaches</p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 pb-3 bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-MPwNXrwooXJkCOLyjM374z6VF7rWw-boepDX3P4OrHA_jEB3bydMXA5GaNAK43f5mENezCNo07z2oRKwIOzzO0AgWpQa6l_3NvscnbU5Dqx3uhqJZCL0zY6kUXj9HFVkVfP7AQayGFw9suGh9hpWOBRwFq_zbiloMgmiLBIEpiA4u1NX7dQYpiXg--9c0kMwDSjhVxJ0R-GYRaiAjaFnnBWt3bB1cCzdQHwPG7TnSPC4wNRo-EscDQ-H68faXzQbDfg1doOpRjE_');
+                    "></div>
+                  <div class="p-4">
+                    <h3 class="text-slate-800 text-lg font-semibold leading-normal">Tokyo</h3>
+                    <p class="text-slate-600 text-sm font-normal leading-normal">Modern city with unique experiences</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <h2 class="text-2xl font-bold text-slate-800 px-4 pb-2 pt-5">Popular Hotels</h2>
+              <p class="text-slate-600 px-4 pb-5">Discover highly-rated hotels for your next trip.</p>
+              <div
+                class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden pb-4">
+                <div class="flex items-stretch p-4 gap-6">
+                  <div
+                    class="flex flex-col gap-4 rounded-xl min-w-[280px] bg-white shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfek0-xMh1FUnTZP68UFpCFXV44DVTzgfABMTYOA1t5pglCbOVQu14KCkDYyh79YO18oKtZJIVxvIDfXIPEh87pvyTiHkJSUICC78HDwfL7xLu-l6fK-ulno3YmxNJUw2vmKyapgnuujuAMTCahdN7IPFV43fG8QU41RW5grYtomYZpL5nWeNqn5r1GxPS1UsZgH4WkvbJpWKebQ578iw2jBtbQUziEdf5AjIEPO-eGrAoP9mMRNkuYEVvmh7hsYUF91n6dQzsrX3j');
+                      "></div>
+                    <div class="p-4 pt-0">
+                      <h3 class="text-slate-800 text-lg font-semibold leading-normal">The Grand Retreat</h3>
+                      <p class="text-slate-600 text-sm font-normal leading-normal">
+                        Experience luxury in the heart of the city
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col gap-4 rounded-xl min-w-[280px] bg-white shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYvrratDU9m9vtxZRL0pq0AebCYAlMa6Lxw5uT1P13gQE0mRSIH7lbe08C98U2nfjhbRN6r6vcKLNLaf7IYZPmL3862IMZZxXefxfMVjt6AvUamdCUJgCIpTJgUQDkOHC2KNGXw1ZMNHg1j6ZXTWwPvP90QlWC93ExJS5N7wW7cK_xeX7y7zK1roBcCzPS3KUPr2pP_djjPubAxcqGJBAJS30VTmnBdtOurLXtWRGpCSEG76ILqgPf5MzJGfc0-3RHJzdvL2SDnu5g');
+                      "></div>
+                    <div class="p-4 pt-0">
+                      <h3 class="text-slate-800 text-lg font-semibold leading-normal">Cityscape Suites</h3>
+                      <p class="text-slate-600 text-sm font-normal leading-normal">
+                        Stay in the center of the action with modern amenities
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col gap-4 rounded-xl min-w-[280px] bg-white shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUqA9Q7pHXxIB6oVXFzde9XMER52MclWoJ9PjndVJgqFkCCf7l6GHW6n5w6qC-b7bmEFs-owIw1ZI9ADAXEHrBxjeX6lQIzPcFkTc2fksFzCxDQ_BJLNJSBCuZN7No9ZgxbyP8Z5SUMVW6m-dCBi68iqOmhVDuT1SHQxgS6VravQjk02sCaE4U1KbMkeua6O2GfX4wOFVqjXSBTlZd2GMnEAGVOuU8EvsrnlaMoMyQrKJl7WW2IQpLlJJGMQdSZ2NTaiu3wW3cdigq');
+                      "></div>
+                    <div class="p-4 pt-0">
+                      <h3 class="text-slate-800 text-lg font-semibold leading-normal">Harbor Inn</h3>
+                      <p class="text-slate-600 text-sm font-normal leading-normal">
+                        Enjoy a cozy stay with a view of the harbor
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col gap-4 rounded-xl min-w-[280px] bg-white shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-video bg-cover"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmlVRb-0M8byrEFpV8cfKJIxcrqTFHEx0AmB3elBisLKmgb8Y5pQIZBhqPycBT5FZzvsuX9-xzABrIRs7MBDa990Mw5KThm8IULFli1OYv-EuTJDpN4vXA8i3Oo7ZivN1kDlhq_ACJV5UyZA-we7wMN4uKaJi-L-98j2vcjZ__z9obs53cqjgsWvO1Ijpac6hVnETGKwYT61tNM_1XpU-mZp4BbJEUpnYzHz6S_CEesjKAyPodz5hvEhWuce8UQnDom4pXosY-64Ky');
+                      "></div>
+                    <div class="p-4 pt-0">
+                      <h3 class="text-slate-800 text-lg font-semibold leading-normal">Oceanview Resort</h3>
+                      <p class="text-slate-600 text-sm font-normal leading-normal">
+                        Relax by the beach with stunning ocean views
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        
+        <!-- Footer component placeholder -->
+        <div data-component="footer"></div>
+      </div>
+    </div>
+  </body>
+</html>

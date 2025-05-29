@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/server.js",
+    "format": "node format-html.js",
+    "format:check": "prettier --check \"client/**/*.html\"",
+    "format:all": "prettier --write \"client/**/*.html\""
   },
   "keywords": [],
   "author": "",

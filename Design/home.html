@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>StayFinder - Your Next Adventure Awaits</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../client/components/components.js"></script>
+    <style>
+      .hero-bg {
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+          url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      }
+      .destination-card-image {
+        transition: transform 0.3s ease-out;
+      }
+      .destination-card:hover .destination-card-image {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-white" style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Navbar component placeholder -->
+        <div data-component="navbar"></div>
+        
+        <main class="flex-1">
+          <section
+            class="hero-bg relative flex min-h-[500px] md:min-h-[600px] flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-6 text-center text-white">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative z-10 flex flex-col items-center gap-6">
+              <h1 class="text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
+                Find your next stay
+              </h1>
+              <p class="text-lg font-normal leading-relaxed md:text-xl">
+                Search deals on hotels, homes, and much more...
+              </p>
+              <form class="mt-4 w-full max-w-xl">
+                <div class="flex flex-col sm:flex-row items-center rounded-xl bg-white p-2 shadow-lg gap-2">
+                  <div class="relative flex-grow w-full sm:w-auto">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                      <svg
+                        aria-hidden="true"
+                        class="h-5 w-5 text-gray-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          clip-rule="evenodd"
+                          d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                          fill-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <input
+                      class="form-input block w-full rounded-lg border-transparent focus:border-transparent focus:ring-0 py-3 pl-10 pr-3 text-gray-900 placeholder:text-gray-500 text-sm leading-6"
+                      placeholder="Where are you going?"
+                      type="text" />
+                  </div>
+                  <button
+                    class="w-full sm:w-auto flex-shrink-0 rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    type="submit">
+                    Search
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="py-12 md:py-16 bg-white">
+            <div class="container mx-auto px-6">
+              <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">Featured destinations</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div
+                  class="destination-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div class="aspect-w-4 aspect-h-3">
+                    <img
+                      alt="Paris"
+                      class="destination-card-image object-cover w-full h-full"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUVTzh28wdBWwhXoVBjBKwyqak2oO08klzVzie_dZgsL4T1zCF7E20ZPLh0QaHqf8d6tA39Imb69TevIBnXH_1QVnEn5hs7tRx6stsyMIolZtmH3Dh4298ssxCb2-NxuqZL-dvvRqrIPN3Y-PIcIaAB6_VEE5f8elSVX_cYKHSyQuMhlQ19SptFw-yrdELA35IEeufvrbwsbYHK_6zmCW1J6t78CMW2VqPKlcnWTQ877NCKbjo55NVyezTos8aPfjfVqIr-zRnA6gs" />
+                  </div>
+                  <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-900">Paris</h3>
+                    <p class="text-sm text-gray-600 mt-1">Romantic city with iconic landmarks</p>
+                  </div>
+                </div>
+                <div
+                  class="destination-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div class="aspect-w-4 aspect-h-3">
+                    <img
+                      alt="London"
+                      class="destination-card-image object-cover w-full h-full"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqa0gZ_7Ux0lNep8A4mH59i1Y8_QT85qu8F3yqYNuZ-U-Vs6I2Tx-pP_EzWeIYzLATO7jvJL5-gpWyhF3nVDYienbMyyqEWL_H9afugkSmy6Wyslg6CRDgrjvqoqDzggOwlPuifNtjeayuWSPHDNk62LiMH33XG9pusi_R8fL2peXk874WOEaay_JlrAn0pwDm6y8xLQtuTwE0JOjlj0N_h8xq9rHZ3V963TBhWM5lA5NOoJSQRPm5X4-fFKUCCp_po5Jq42mJSafX" />
+                  </div>
+                  <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-900">London</h3>
+                    <p class="text-sm text-gray-600 mt-1">Historic city with rich culture</p>
+                  </div>
+                </div>
+                <div
+                  class="destination-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div class="aspect-w-4 aspect-h-3">
+                    <img
+                      alt="Rome"
+                      class="destination-card-image object-cover w-full h-full"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXmjhsDuYzvjzIpROe9pl72sHYuYADjm1ef-6Fs0XRJXSzndv8I9F4qbTwn5NAkox6soqb_EwoNNQrKSq6fvfoQ_qyyPR2Sjh65P9cchpWuuBpULEp1mzMkPAro3m5PidjR7K6j_ELq0YXvkMt8Rivt0cvMMmq0wH8-8GjdE5v4gx2kIu-UdxWh0T09iWYrY0b4YKa4YTjvaMR5qVRnI8SYzhEDYGxr7FHSQR-rwZGqcVupaXzRdkK02ZY64_dTZgKRpD1TY-mptJl" />
+                  </div>
+                  <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-900">Rome</h3>
+                    <p class="text-sm text-gray-600 mt-1">Ancient city with stunning architecture</p>
+                  </div>
+                </div>
+                <div
+                  class="destination-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div class="aspect-w-4 aspect-h-3">
+                    <img
+                      alt="Barcelona"
+                      class="destination-card-image object-cover w-full h-full"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbfD8oewbBcan7mkhuKBiu8PbbzVOyktXnYN7BlKNnalgvKd4Pe1kPLLU9hkTy3FVxZe8IlumWSbSIR1COmyFCUONAd7on_uxKF9sJyTuQgVqgHSscomWUt6YILu83flAWKrUMIvDK3ogWOMXm-LJKXF8toLcnP4a5Z4PuF_AHTRHfkndA_7h8oCiqaq5QT0XIYkOB3ebzFnD2-jaMhk3SAUoRu1M7eRZ3OtlTLdh-GGc3MHze9ASp4bRq9MyloZc7VCqQqKMxxUHO" />
+                  </div>
+                  <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-900">Barcelona</h3>
+                    <p class="text-sm text-gray-600 mt-1">Vibrant city with beautiful beaches</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        
+        <!-- Footer component placeholder -->
+        <div data-component="footer"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>StayFinder - Attractions</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../client/components/components.js"></script>
+  </head>
+  <body class="bg-white" style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Navbar component placeholder -->
+        <div data-component="navbar"></div>
+        
+        <main class="px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-10 bg-gray-50">
+          <div class="layout-content-container flex flex-col max-w-[1200px] flex-1 w-full">
+            <h1 class="text-[#111618] text-4xl font-bold leading-tight mb-8 text-center md:text-left">
+              Discover Unforgettable Experiences
+            </h1>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-10">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="flex flex-col">
+                  <label class="text-sm font-medium text-gray-700 mb-1" for="destination">Destination</label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <span class="material-icons text-gray-400">place</span>
+                    </div>
+                    <input
+                      class="form-input w-full pl-10 pr-3 py-3 border-gray-300 rounded-lg shadow-sm focus:ring-[#2ab6ed] focus:border-[#2ab6ed] text-base"
+                      id="destination"
+                      placeholder="Where are you going?"
+                      type="text" />
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <label class="text-sm font-medium text-gray-700 mb-1" for="date">Date</label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <span class="material-icons text-gray-400">calendar_today</span>
+                    </div>
+                    <input
+                      class="form-input w-full pl-10 pr-3 py-3 border-gray-300 rounded-lg shadow-sm focus:ring-[#2ab6ed] focus:border-[#2ab6ed] text-base"
+                      id="date"
+                      placeholder="Select date"
+                      type="date" />
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <button
+                  class="flex items-center gap-2 min-w-[120px] cursor-pointer justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#2ab6ed] text-white text-base font-semibold leading-normal tracking-[0.015em] hover:bg-[#22a8d9] transition-colors">
+                  <span class="material-icons">search</span>
+                  <span class="truncate">Search</span>
+                </button>
+              </div>
+            </div>
+            <h2 class="text-[#111618] text-3xl font-bold leading-tight tracking-[-0.015em] mb-6">
+              Popular Attractions
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div class="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+                <div
+                  class="relative w-full aspect-[4/3] bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMCaeFB4RPbyZbnrKahw96nxV3n2OjCj6I-lPaOFURB0Qq_Qh_4q_Rg1UuSmdAHLcb5WXVj9ztamQtOyQYFSjK1v0bgFBuWoXYa1Okkw4Q68jTUjzDeh5JHhqsWpn6HMiLrmqA-39weAiddzxJQvcGTlQsNQwsJoXR9M92kraQeGHeA9ANn5POP0RMlII6gFLcs8Qw7fvxstx12Jzbe1SHk00vPA8Pze-YuImJtLIQhqIQlQ82wJlMSFDb1yxp6lnKEAP7a4js0cPt');
+                  ">
+                  <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                  <div class="absolute top-2 right-2 bg-white p-1 rounded-full">
+                    <span class="material-icons text-red-500">favorite_border</span>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                  <h3 class="text-[#111618] text-lg font-semibold leading-tight mb-1">Golden Gate Bridge Tour</h3>
+                  <p class="text-[#617e89] text-sm font-normal leading-normal mb-3 flex-grow">
+                    Explore the iconic bridge with a guided tour offering breathtaking views and historical insights.
+                  </p>
+                  <div class="flex items-center justify-between mt-auto">
+                    <p class="text-lg font-bold text-[#2ab6ed]">$45</p>
+                    <button class="text-sm font-medium text-[#2ab6ed] hover:underline">View Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+                <div
+                  class="relative w-full aspect-[4/3] bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYPXw8N8fn2TVSmMdWTxNVjjECd8zBjuGTGS-1Ta9fbcjZa3og-sUsbf93t69pJO8iaAmAofvZMxwyNir_6c3zWhhjHogR7cEbr4YluhUUrTv2wDagvKfFkUsp4ps-0sI2-dfhQ3WEEmCW9yZyhHGKN9tRQrZs8ZlCeUuKa0CvjozhwIPhq3tVu-ytJQwftDcqmz2F2HfOiueCos7n8VJj9CAVwbWhjnU4nNOJ5ycFba5w3j3r79FQMnsMMBF3B7QRbOpD6xy5K1HJ');
+                  ">
+                  <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                  <div class="absolute top-2 right-2 bg-white p-1 rounded-full">
+                    <span class="material-icons text-red-500">favorite_border</span>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                  <h3 class="text-[#111618] text-lg font-semibold leading-tight mb-1">Yosemite National Park Hike</h3>
+                  <p class="text-[#617e89] text-sm font-normal leading-normal mb-3 flex-grow">
+                    Hike through the breathtaking landscapes of Yosemite, witnessing majestic waterfalls and giant
+                    sequoias.
+                  </p>
+                  <div class="flex items-center justify-between mt-auto">
+                    <p class="text-lg font-bold text-[#2ab6ed]">$70</p>
+                    <button class="text-sm font-medium text-[#2ab6ed] hover:underline">View Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+                <div
+                  class="relative w-full aspect-[4/3] bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCgAkJSSzRVcSNPDWwJQSO7HZ1ONngAYywAdX6zWT-Dt5XobvP43ZKdFupcW_-UtLtpcXDjc_Fw8xIwmyDle6RgSUhnuh-ek1neeJ9_l0ze6HgNIglEuDCgUUHOOW6j6t5QtPdqO9Tx66MARyjthuc-rtgVtwblrGtrb9AGS8v4v_oL4RWZCqyV0GXrTEKUbUlm5mspyGxSw1W1LO3XB9Pf38S04-U53dqClgzsPKhQtVMuG9RFBS1BqRTDNaOE1gTwUc46n9zwTJ_');
+                  ">
+                  <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                  <div class="absolute top-2 right-2 bg-white p-1 rounded-full">
+                    <span class="material-icons text-red-500">favorite</span>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                  <h3 class="text-[#111618] text-lg font-semibold leading-tight mb-1">San Francisco Bay Cruise</h3>
+                  <p class="text-[#617e89] text-sm font-normal leading-normal mb-3 flex-grow">
+                    Enjoy stunning views of the city skyline, Alcatraz, and the Golden Gate Bridge from the bay.
+                  </p>
+                  <div class="flex items-center justify-between mt-auto">
+                    <p class="text-lg font-bold text-[#2ab6ed]">$35</p>
+                    <button class="text-sm font-medium text-[#2ab6ed] hover:underline">View Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl">
+                <div
+                  class="relative w-full aspect-[4/3] bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAn_egEUK3MBw9mPtenmxXkisYJZ_FmoQfX0oq-NYEt0jFJkMdMZQLlyzjt0hddTFLZOHlCX_4i6bDO-UlYh_67sYpNTsAeS5IVDSv_om0z_H1BD0l_m_EfP64q2C4N0XSbHpR-B_mZY6EuwQr5xMKds4tO08LL05kI9lm0r3si-pTcYZ4w4Pr2DZUreEWfasSmZXXiwvzAW8QKw6cWqg5EvEel5LjNgQt3cl744seBrDzuKyY6wQAurZazjV1ZZoFOxdrY6jorlZyM');
+                  ">
+                  <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                  <div class="absolute top-2 right-2 bg-white p-1 rounded-full">
+                    <span class="material-icons text-red-500">favorite_border</span>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                  <h3 class="text-[#111618] text-lg font-semibold leading-tight mb-1">Wine Country Tasting Tour</h3>
+                  <p class="text-[#617e89] text-sm font-normal leading-normal mb-3 flex-grow">
+                    Indulge in a tasting tour of the renowned Napa and Sonoma wine regions, sampling exquisite wines.
+                  </p>
+                  <div class="flex items-center justify-between mt-auto">
+                    <p class="text-lg font-bold text-[#2ab6ed]">$120</p>
+                    <button class="text-sm font-medium text-[#2ab6ed] hover:underline">View Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        
+        <!-- Footer component placeholder -->
+        <div data-component="footer"></div>
+      </div>
+    </div>
+  </body>
+</html>

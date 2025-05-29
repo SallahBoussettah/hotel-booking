@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>StayFinder - Car Rentals</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../client/components/components.js"></script>
+    <style>
+      :root {
+        --select-button-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' fill='rgb(97,126,137)' viewBox='0 0 256 256'%3e%3cpath d='M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z'%3e%3c/path%3e%3c/svg%3e");
+        font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white" style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Navbar component placeholder -->
+        <div data-component="navbar"></div>
+        
+        <main class="flex-1 bg-slate-50 py-12 px-40">
+          <div class="mx-auto flex max-w-screen-xl flex-col gap-10">
+            <section class="rounded-xl bg-white p-8 shadow-lg">
+              <h1 class="text-slate-900 text-4xl font-bold leading-tight tracking-tight mb-2">
+                Find the perfect rental car
+              </h1>
+              <p class="text-slate-600 text-lg mb-8">
+                Search and compare car rental deals from thousands of locations.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="relative">
+                  <label class="block text-sm font-medium text-slate-700 mb-1" for="pickup-location">
+                    Pick-up location
+                  </label>
+                  <div class="relative">
+                    <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">place</span>
+                    <input
+                      class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-0 focus:ring-2 focus:ring-[#2ab6ed] border border-slate-300 bg-white h-14 placeholder:text-slate-400 pl-10 pr-4 py-3 text-base font-normal leading-normal"
+                      id="pickup-location"
+                      placeholder="Enter city, airport, or address"
+                      value="" />
+                  </div>
+                </div>
+                <div class="relative">
+                  <label class="block text-sm font-medium text-slate-700 mb-1" for="dropoff-location">
+                    Drop-off location (optional)
+                  </label>
+                  <div class="relative">
+                    <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">place</span>
+                    <input
+                      class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-0 focus:ring-2 focus:ring-[#2ab6ed] border border-slate-300 bg-white h-14 placeholder:text-slate-400 pl-10 pr-4 py-3 text-base font-normal leading-normal"
+                      id="dropoff-location"
+                      placeholder="Enter city, airport, or address"
+                      value="" />
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="relative">
+                  <label class="block text-sm font-medium text-slate-700 mb-1" for="pickup-date">
+                    Pick-up date &amp; time
+                  </label>
+                  <div class="relative">
+                    <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                      calendar_today
+                    </span>
+                    <input
+                      class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-0 focus:ring-2 focus:ring-[#2ab6ed] border border-slate-300 bg-white h-14 placeholder:text-slate-400 pl-10 pr-4 py-3 text-base font-normal leading-normal"
+                      id="pickup-date"
+                      type="datetime-local" />
+                  </div>
+                </div>
+                <div class="relative">
+                  <label class="block text-sm font-medium text-slate-700 mb-1" for="dropoff-date">
+                    Drop-off date &amp; time
+                  </label>
+                  <div class="relative">
+                    <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                      calendar_today
+                    </span>
+                    <input
+                      class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-0 focus:ring-2 focus:ring-[#2ab6ed] border border-slate-300 bg-white h-14 placeholder:text-slate-400 pl-10 pr-4 py-3 text-base font-normal leading-normal"
+                      id="dropoff-date"
+                      type="datetime-local" />
+                  </div>
+                </div>
+                <div class="relative">
+                  <label class="block text-sm font-medium text-slate-700 mb-1" for="car-type">Car type</label>
+                  <div class="relative">
+                    <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                      directions_car
+                    </span>
+                    <select
+                      class="form-select flex w-full min-w-0 flex-1 appearance-none resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-0 focus:ring-2 focus:ring-[#2ab6ed] border border-slate-300 bg-white h-14 bg-[image:--select-button-svg] placeholder:text-slate-400 pl-10 pr-4 py-3 text-base font-normal leading-normal"
+                      id="car-type">
+                      <option value="any">Any Car Type</option>
+                      <option value="sedan">Sedan</option>
+                      <option value="suv">SUV</option>
+                      <option value="truck">Truck</option>
+                      <option value="van">Van</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 bg-[#2ab6ed] hover:bg-[#1e9ccd] text-white text-lg font-bold leading-normal tracking-[0.015em] transition-colors">
+                <span class="material-icons mr-2">search</span>
+                <span class="truncate">Search Cars</span>
+              </button>
+            </section>
+            <section>
+              <h2 class="text-slate-900 text-3xl font-bold leading-tight tracking-tight mb-6">Featured Deals</h2>
+              <div class="rounded-xl bg-white shadow-lg overflow-hidden @container">
+                <div class="flex flex-col @[600px]:flex-row items-stretch justify-start">
+                  <div
+                    class="w-full @[600px]:w-2/5 bg-center bg-no-repeat aspect-video @[600px]:aspect-auto bg-cover"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVBc5AytVy4qRq_yjN64bUmLMwEwSr3JitgbgEhuAra0FleUcdeSLXFmiwVv3p8ek9EuN-gIjDf0YHIpcZThu7qlmmC79tlZRBgippbSTWCD40rpvLBwQWFfmGTWW-P1Q_lTpc8t6IGM3Ga9sBfD_q_f-IOSdoUJjJEw_qirKoOeJABce0je1e6y8UBMFk_6P5RR0oVQAeECElOrbp30TiG75zbtSQXeyH0TzJ9MHXS4EkYgE4uMkekn2LrPuEpU07OmLX5639BDi7');
+                    "></div>
+                  <div
+                    class="flex w-full @[600px]:w-3/5 grow flex-col items-start justify-center gap-2 p-6 @[600px]:p-8">
+                    <h3 class="text-slate-900 text-2xl font-bold leading-tight tracking-tight">Luxury Car Rentals</h3>
+                    <p class="text-slate-600 text-base font-normal leading-normal">
+                      Experience premium comfort and performance with our selection of luxury vehicles. Explore the city
+                      in style.
+                    </p>
+                    <button
+                      class="mt-2 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#2ab6ed] hover:bg-[#1e9ccd] text-white text-sm font-medium leading-normal transition-colors">
+                      <span class="truncate">View Luxury Cars</span>
+                      <span class="material-icons ml-1 text-base">arrow_forward</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <h2 class="text-slate-900 text-3xl font-bold leading-tight tracking-tight mb-6">Popular Locations</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flex flex-col gap-3 pb-3 rounded-xl bg-white shadow-lg overflow-hidden group">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzGqldQPxt_qJyLDorQ0HICbndSSpitvBnWTN9y-tJRm2GcAsbYpKQqJ8__01-FWPSV4sDmyj4oNN-MqxeUWCt9yG8DU8Liw9LzmkmMU89uOkGd99GTbfBfWARjBshoQWM5y7PHMmoE7FKRkMxT76HHGBN1TGr8HQCEJAJ5GIZAI2YOeRwCBN7Jv_K_GSjaiUozCPK2AJn634pYAey6jvT7Or4vNNlOI8WogaPh4IjeL2GIuKCeTrO12D2zOTCkHaOUedQ38ZqX8cW');
+                    "></div>
+                  <div class="p-4">
+                    <p class="text-slate-900 text-lg font-semibold leading-normal">Los Angeles</p>
+                    <a class="text-[#2ab6ed] hover:text-[#1e9ccd] text-sm font-medium flex items-center mt-1" href="#">
+                      Explore rentals
+                      <span class="material-icons ml-1 text-base">arrow_forward</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-3 pb-3 rounded-xl bg-white shadow-lg overflow-hidden group">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAj6lrGMcF5tKXrvbkxBQTvi8pRWyb_2LmNrNCmKU3kYU_3UMr5c1c2gwCZt5QIbjTfWeVpeslk__-rNiqh7EK6NRd2v4xf124DY95Nw9EuBMVQXLpiefexdDkNufrGDduJDHQzPzF8Zf-IKP8e0JgPqijbAVHctaOmhGE-iida3FCRXvTl1_jsAxZZqTTkNomV09Idqo9YYR62Whqxh3bXXObBzlA4SfXCgseLlqSS_SmmHbuISJcVmWvQrwMShFwVeMRoJMzGxGyj');
+                    "></div>
+                  <div class="p-4">
+                    <p class="text-slate-900 text-lg font-semibold leading-normal">New York</p>
+                    <a class="text-[#2ab6ed] hover:text-[#1e9ccd] text-sm font-medium flex items-center mt-1" href="#">
+                      Explore rentals
+                      <span class="material-icons ml-1 text-base">arrow_forward</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-3 pb-3 rounded-xl bg-white shadow-lg overflow-hidden group">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC88F6bMC0KBKpOGA3U0sKSdtoy1kFSKBsFVi_yGrpoyi7RBRLTQHd0-htRaeEDHZJrklahDM8fZiL_WBBIZaFOedFx1UgMfW5TzfdpnuFPaLgOU3LRk49BqGpEUbCgHM1jk7LrXjJUJS6B0DMhQ6bKvfvO3ga8neSL8nzoJKftqfC4p4P0fz-VtXZEkF5pn_Z7S7Dr0ofeFAx7uQDhmcGnaoQ0epHWdujybNvBMuIWxqZek4WqE7Vk2mMBKmDDp1WBW91vGy3Kqbp9');
+                    "></div>
+                  <div class="p-4">
+                    <p class="text-slate-900 text-lg font-semibold leading-normal">Miami</p>
+                    <a class="text-[#2ab6ed] hover:text-[#1e9ccd] text-sm font-medium flex items-center mt-1" href="#">
+                      Explore rentals
+                      <span class="material-icons ml-1 text-base">arrow_forward</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        
+        <!-- Footer component placeholder -->
+        <div data-component="footer"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,83 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Swiper - Tinder for Hotels</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="swiper-styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="swiper-styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1><i class="fas fa-hotel"></i> Hotel Swiper</h1>
-            <p>Swipe right on hotels you love, left on those you don't!</p>
-        </header>
+      <header>
+        <h1>
+          <i class="fas fa-hotel"></i>
+          Hotel Swiper
+        </h1>
+        <p>Swipe right on hotels you love, left on those you don't!</p>
+      </header>
 
-        <div class="search-container">
-            <input type="text" id="location" placeholder="Where to? (e.g., New York, Paris)" required>
-            <input type="date" id="check-in" required>
-            <input type="date" id="check-out" required>
-            <select id="guests">
-                <option value="1">1 Guest</option>
-                <option value="2" selected>2 Guests</option>
-                <option value="3">3 Guests</option>
-                <option value="4">4 Guests</option>
-            </select>
-            <button onclick="startSwiping()" class="search-btn">Start Swiping</button>
+      <div class="search-container">
+        <input type="text" id="location" placeholder="Where to? (e.g., New York, Paris)" required />
+        <input type="date" id="check-in" required />
+        <input type="date" id="check-out" required />
+        <select id="guests">
+          <option value="1">1 Guest</option>
+          <option value="2" selected>2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4 Guests</option>
+        </select>
+        <button onclick="startSwiping()" class="search-btn">Start Swiping</button>
+      </div>
+
+      <div id="loader" class="loader hidden"></div>
+
+      <div id="swiper-container" class="hidden">
+        <div id="hotel-card" class="swiper-card">
+          <div class="hotel-image">
+            <img id="hotel-image" src="https://via.placeholder.com/400x300?text=Ready+to+Swipe" alt="Hotel" />
+          </div>
+          <div class="hotel-info">
+            <h2 id="hotel-name">Ready to Swipe</h2>
+            <p id="hotel-address">Find your perfect match</p>
+            <div id="hotel-rating">★★★★★</div>
+            <div id="hotel-price">Start searching to see prices</div>
+          </div>
         </div>
 
-        <div id="loader" class="loader hidden"></div>
-
-        <div id="swiper-container" class="hidden">
-            <div id="hotel-card" class="swiper-card">
-                <div class="hotel-image">
-                    <img id="hotel-image" src="https://via.placeholder.com/400x300?text=Ready+to+Swipe" alt="Hotel">
-                </div>
-                <div class="hotel-info">
-                    <h2 id="hotel-name">Ready to Swipe</h2>
-                    <p id="hotel-address">Find your perfect match</p>
-                    <div id="hotel-rating">★★★★★</div>
-                    <div id="hotel-price">Start searching to see prices</div>
-                </div>
-            </div>
-
-            <div class="swipe-buttons">
-                <button id="swipe-left" class="swipe-btn swipe-left" onclick="swipeLeft()">
-                    <i class="fas fa-times"></i>
-                </button>
-                <button id="swipe-right" class="swipe-btn swipe-right" onclick="swipeRight()">
-                    <i class="fas fa-heart"></i>
-                </button>
-            </div>
-
-            <div id="matches-container" class="matches-container hidden">
-                <h3>Your Hotel Matches</h3>
-                <div id="matches-list"></div>
-            </div>
+        <div class="swipe-buttons">
+          <button id="swipe-left" class="swipe-btn swipe-left" onclick="swipeLeft()">
+            <i class="fas fa-times"></i>
+          </button>
+          <button id="swipe-right" class="swipe-btn swipe-right" onclick="swipeRight()">
+            <i class="fas fa-heart"></i>
+          </button>
         </div>
 
-        <div id="humor-modal" class="modal hidden">
-            <div class="modal-content">
-                <span class="close-modal" onclick="closeModal()">&times;</span>
-                <h3 id="modal-title">AI's Thoughts</h3>
-                <p id="modal-text"></p>
-                <button onclick="closeModal()" class="modal-btn">Next Hotel</button>
-            </div>
+        <div id="matches-container" class="matches-container hidden">
+          <h3>Your Hotel Matches</h3>
+          <div id="matches-list"></div>
         </div>
+      </div>
 
-        <div id="no-hotels" class="no-hotels hidden">
-            <h2>No more hotels to swipe!</h2>
-            <p>Try another location or change your dates.</p>
-            <button onclick="resetSearch()" class="search-btn">New Search</button>
+      <div id="humor-modal" class="modal hidden">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeModal()">&times;</span>
+          <h3 id="modal-title">AI's Thoughts</h3>
+          <p id="modal-text"></p>
+          <button onclick="closeModal()" class="modal-btn">Next Hotel</button>
         </div>
+      </div>
 
-        <footer>
-            <a href="index.html" class="back-link">Back to Home</a>
-        </footer>
+      <div id="no-hotels" class="no-hotels hidden">
+        <h2>No more hotels to swipe!</h2>
+        <p>Try another location or change your dates.</p>
+        <button onclick="resetSearch()" class="search-btn">New Search</button>
+      </div>
+
+      <footer>
+        <a href="index.html" class="back-link">Back to Home</a>
+      </footer>
     </div>
 
     <script src="hotel-swiper.js"></script>
-</body>
-</html> 
+  </body>
+</html>

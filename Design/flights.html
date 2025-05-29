@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>StayFinder - Flight Bookings</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../client/components/components.js"></script>
+  </head>
+  <body class="bg-white" style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Navbar component placeholder -->
+        <div data-component="navbar"></div>
+        
+        <main class="flex-1">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-cover bg-center"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRCZhIL3xOkbFOMEUyvTP1okVA0K4QKYolUMwKswz3U_jrGUZn4T5dMW9xiToWsrCHESwYRpmLLKlKOS7-eZrh0NS7es4-ON58-srNm9swGCxlfQGd3Asx38wnS8hco5NA-CBV0Bem1-NatMgvvrJP_MEySPwA-bAwN5FugMNp7o6w9tvOkAVhK7n81cE1FnOakrtT7KLc23dNG6kQQU2VzApJttBlBgvDwAo39wYhhMjCf7BDnzF4sk8ar8SvL0HwrsyHxFDuFV_U');
+              "></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/10"></div>
+            <div class="relative px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 text-center text-white">
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">Find Your Perfect Flight</h1>
+              <p class="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto">
+                Search for flights to destinations around the world. Compare prices and find the best deals on airfare.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white py-12 sm:py-16 lg:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="bg-slate-50 p-6 sm:p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Search Flights</h2>
+                <form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+                  <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1" for="departure-city">
+                      Departure City
+                    </label>
+                    <input
+                      class="w-full rounded-lg border-slate-300 focus:border-[#2ab6ed] focus:ring-[#2ab6ed] shadow-sm"
+                      id="departure-city"
+                      name="departure-city"
+                      placeholder="e.g. New York"
+                      type="text" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1" for="arrival-city">Arrival City</label>
+                    <input
+                      class="w-full rounded-lg border-slate-300 focus:border-[#2ab6ed] focus:ring-[#2ab6ed] shadow-sm"
+                      id="arrival-city"
+                      name="arrival-city"
+                      placeholder="e.g. London"
+                      type="text" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1" for="travel-dates">Travel Dates</label>
+                    <input
+                      class="w-full rounded-lg border-slate-300 focus:border-[#2ab6ed] focus:ring-[#2ab6ed] shadow-sm"
+                      id="travel-dates"
+                      name="travel-dates"
+                      type="date" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1" for="passengers">Passengers</label>
+                    <input
+                      class="w-full rounded-lg border-slate-300 focus:border-[#2ab6ed] focus:ring-[#2ab6ed] shadow-sm"
+                      id="passengers"
+                      min="1"
+                      name="passengers"
+                      placeholder="1"
+                      type="number" />
+                  </div>
+                  <div
+                    class="md:col-span-2 lg:col-span-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-4">
+                    <div class="flex items-center gap-x-4 gap-y-2 flex-wrap">
+                      <label class="flex items-center text-sm text-slate-700">
+                        <input
+                          checked=""
+                          class="form-radio h-4 w-4 text-[#2ab6ed] focus:ring-[#2ab6ed] border-slate-300 mr-1.5"
+                          name="trip-type"
+                          type="radio"
+                          value="round-trip" />
+                        Round-trip
+                      </label>
+                      <label class="flex items-center text-sm text-slate-700">
+                        <input
+                          class="form-radio h-4 w-4 text-[#2ab6ed] focus:ring-[#2ab6ed] border-slate-300 mr-1.5"
+                          name="trip-type"
+                          type="radio"
+                          value="one-way" />
+                        One-way
+                      </label>
+                      <label class="flex items-center text-sm text-slate-700">
+                        <input
+                          class="form-radio h-4 w-4 text-[#2ab6ed] focus:ring-[#2ab6ed] border-slate-300 mr-1.5"
+                          name="trip-type"
+                          type="radio"
+                          value="multi-city" />
+                        Multi-city
+                      </label>
+                    </div>
+                    <button
+                      class="w-full sm:w-auto flex items-center justify-center rounded-lg h-11 px-6 bg-[#2ab6ed] hover:bg-[#1f9ed8] text-white text-base font-semibold leading-normal tracking-wide shadow-md hover:shadow-lg transition-all duration-150 ease-in-out"
+                      type="submit">
+                      Search Flights
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-100 py-12 sm:py-16 lg:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-8 sm:mb-10 text-center">
+                Featured Destinations
+              </h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+                  <div class="aspect-w-16 aspect-h-9">
+                    <img
+                      alt="Maldives"
+                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPhbaU2Aw7JgyQYx3FbgndHSKgNDN0siHO1QJWrdVwIEFpa5WMVoaTCewHzkS0CoHDjs1Hfd08QwX2a0K92j3RKi_rwXQsD2vmOAAhCSQvL9b_jzgKkQwfRkDqUZ7H7ddVDE8QHmR5N_SULTAnlrgsjYTkdb9vhXmBiz8V-sbEV3ewquH9ab6d2tgPA6OtoJBTTXVgZGvagcFftnotl-spbjB4pQjhA_3oR4JqN8JkRcFDg2qubhV67XssTgXYwBnX0z5aGFuNLqid" />
+                  </div>
+                  <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900 group-hover:text-[#2ab6ed] transition-colors">
+                        Maldives
+                      </h3>
+                      <p class="text-slate-600 text-sm mt-1">Tropical paradise with white sand beaches</p>
+                    </div>
+                    <a class="inline-block mt-4 text-sm font-medium text-[#2ab6ed] hover:text-[#1f9ed8]" href="#">
+                      Explore Flights →
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+                  <div class="aspect-w-16 aspect-h-9">
+                    <img
+                      alt="Paris"
+                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdcwAz_CFgD8iY1pj7uU8RJ5cYu6anfUNaUJR_lnrdGjpqJXAHRYLdt2Lf_YpPOpD94mqTC027lC16z60UCv87zkffBabdKihxs3bzz_t-6d28300QezQMazio0oCArsvX0XUN3gN7l16lWLrtyBBn0OqZfrz1L5u7c67kp9_3iUttw0-lruXsTeecsjWej3_Qga4tgR6xpI78y5ihR_c8OHD96mStKQ9PaiCZXAhb2mt3T9MUO4E_mtZ4i9Op0fGWo2mjnYvqHnBu" />
+                  </div>
+                  <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900 group-hover:text-[#2ab6ed] transition-colors">
+                        Paris
+                      </h3>
+                      <p class="text-slate-600 text-sm mt-1">City of love and lights</p>
+                    </div>
+                    <a class="inline-block mt-4 text-sm font-medium text-[#2ab6ed] hover:text-[#1f9ed8]" href="#">
+                      Explore Flights →
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+                  <div class="aspect-w-16 aspect-h-9">
+                    <img
+                      alt="Tokyo"
+                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1i1ZYCRBfMul6SS15XxMVnYcndg5RmcB05__gaMWtJLzGKkQ6Wnd1WeH1E7ZUhVCwzDmYgkdnfCOUGs2uiG73W_5ZHzHva7VIall-O5LzVOjcGGEVceesIxc7hZnu8hcoCM0DLV31kBPJu_c5z3xssNOkpuQ08pKmX2NTusgAN5p4N9shnSZlFCyzA4xhsS7YMEzBMTbRwZbcfNjromnrCHrfHRmSMuxnjPz6VacxFabuT1d4uCNms2H8Z7EQVpe5QAu-MB6VqQFd" />
+                  </div>
+                  <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900 group-hover:text-[#2ab6ed] transition-colors">
+                        Tokyo
+                      </h3>
+                      <p class="text-slate-600 text-sm mt-1">Vibrant city with rich culture</p>
+                    </div>
+                    <a class="inline-block mt-4 text-sm font-medium text-[#2ab6ed] hover:text-[#1f9ed8]" href="#">
+                      Explore Flights →
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+                  <div class="aspect-w-16 aspect-h-9">
+                    <img
+                      alt="Switzerland"
+                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf2K78Q6XSiOfJV7JTu7UpupFHtWgJYPQYougRpoxsyGmcrBfpLZjGfikxsltvl-iDrILKltrCP-cYTEsYFpm7IVCXVDInDVqq5mrzxmB6RE1l9tw8BYWxNj7XN5BbYEvn5vgOQQ8ZzCYQzaJ8knssI1xpPIo4q4tUETVZkCjWYekEQwSPam_P_gJjWPP2X7qtxg_MQXn5nUNYmvnuheS_9T99q__IaenAMmmdz4u0en9pglSvkS2-jdedsVckQMdovDVOdsIY4fFH" />
+                  </div>
+                  <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900 group-hover:text-[#2ab6ed] transition-colors">
+                        Switzerland
+                      </h3>
+                      <p class="text-slate-600 text-sm mt-1">Scenic landscapes and outdoor activities</p>
+                    </div>
+                    <a class="inline-block mt-4 text-sm font-medium text-[#2ab6ed] hover:text-[#1f9ed8]" href="#">
+                      Explore Flights →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white py-12 sm:py-16 lg:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-8 sm:mb-10 text-center">
+                Special Flight Deals
+              </h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div class="aspect-w-16 aspect-h-9">
+                    <img
+                      alt="New York City"
+                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFTW13ZvLVPKf8EHsgI0I0iZk7EAD8E3rVfYcSHh7NZjUHGAinD_fmaAq8JG5lniQnPHQuHL2aoSPVV0098Vkcc91GW6unHoznes5imjdlKggkW17wA8Q5nPvglFZXbP76V2-62peSFnEV6hdAMJz9CgOxt866kkVzO14lVQEg8Yn0G2iTYLwDPROF3gqAUiGED280nX4TRHlFuHyhmTcdT2ATjW1jscOYreE2SfHjjYy_pIXTjdI-GbZGgkUrxSHIYHKOusBcjss2" />
+                  </div>
+                  <div class="p-5">
+                    <h3 class="text-xl font-semibold text-slate-900 group-hover:text-[#2ab6ed] transition-colors">
+                      New York City
+                    </h3>
+                    <p class="text-slate-600 text-sm mt-1">
+                      Flights starting at
+                      <span class="font-bold text-[#2ab6ed]">$299</span>
+                    </p>
+                    <a class="inline-block mt-3 text-sm font-medium text-[#2ab6ed] hover:text-[#1f9ed8]" href="#">
+                      Book Now →
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div class="aspect-w-16 aspect-h-9">
+                    <img
+                      alt="London"
+                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQmU68iLl-II1uD6zmY8y65uhi53WcKQGcJ1gc86JJWPrygxUZXbEXKtp6MnwfODE5gJMqkCIDVV28SQzDRNJC0GG3bLF8bX_QAxaYLzAhLgc76SXurSjVdoO2PfI3Tvl1EJvMWyP9cO5LexifFpnpZkSIXP8_7jURYKHIul0C5IYF3tI4eoJ-XY-KoCgwaCYiGeCO_kR2YpW_xBZKMBKGsEdpPHWnqrPFUExM653yqsceYsvjoFaUA5zowHhkfJiwMP82CXpkR5fl" />
+                  </div>
+                  <div class="p-5">
+                    <h3 class="text-xl font-semibold text-slate-900 group-hover:text-[#2ab6ed] transition-colors">
+                      London
+                    </h3>
+                    <p class="text-slate-600 text-sm mt-1">
+                      Flights starting at
+                      <span class="font-bold text-[#2ab6ed]">$349</span>
+                    </p>
+                    <a class="inline-block mt-3 text-sm font-medium text-[#2ab6ed] hover:text-[#1f9ed8]" href="#">
+                      Book Now →
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div class="aspect-w-16 aspect-h-9">
+                    <img
+                      alt="Rome"
+                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2EJ4eRLKxQKXF70yfDBNY2XaMC3RghHRDbrcaTZb237H4zrgEItX5eMm9lZAYYkzSJAwv_KKlq7QxsfNQ9z3ShcR_ctEufr5z31v-YeH5dL6e2i7kHBdnwtxM5MqnyXX-Hkw11-Uv_tBryP6vfNl4v7yT4rdIdG24cNDH_iGJjnWP2AtcD4QFk04jxT4t5H56uL-CKATeYVVj1rMc-CGF-4zIyljXlfO0Lq5GhzsnQsjHioyF6HuBEBMYby3ZXR_WEdK1bv8f-TSk" />
+                  </div>
+                  <div class="p-5">
+                    <h3 class="text-xl font-semibold text-slate-900 group-hover:text-[#2ab6ed] transition-colors">
+                      Rome
+                    </h3>
+                    <p class="text-slate-600 text-sm mt-1">
+                      Flights starting at
+                      <span class="font-bold text-[#2ab6ed]">$399</span>
+                    </p>
+                    <a class="inline-block mt-3 text-sm font-medium text-[#2ab6ed] hover:text-[#1f9ed8]" href="#">
+                      Book Now →
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div class="aspect-w-16 aspect-h-9">
+                    <img
+                      alt="Barcelona"
+                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCopFb628jgs8bp2HdTNTWcNWJ7S0xu2NxADryhP6ELMbyI8TO8yb5qRN8lrg1XsTut_OPzfb06xevLwpBeyv8zhzOuOwY-yYGcqUMSmYH66nL0JBkb08AOgcsVVKSo49iEAfwWdct4zv8hsDWARN2iI3XUYyaAXeYTe9duwmRUQYmGZmmGjWqT9N_cK4m_lnDQ5qnGNz7l-S0fEEBaDtL09heBbx30fnRo2T_ZeLs2Tfml7aE_OtZeRR0EOykICUbVZKJVgWfQLXzX" />
+                  </div>
+                  <div class="p-5">
+                    <h3 class="text-xl font-semibold text-slate-900 group-hover:text-[#2ab6ed] transition-colors">
+                      Barcelona
+                    </h3>
+                    <p class="text-slate-600 text-sm mt-1">
+                      Flights starting at
+                      <span class="font-bold text-[#2ab6ed]">$449</span>
+                    </p>
+                    <a class="inline-block mt-3 text-sm font-medium text-[#2ab6ed] hover:text-[#1f9ed8]" href="#">
+                      Book Now →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        
+        <!-- Footer component placeholder -->
+        <div data-component="footer"></div>
+      </div>
+    </div>
+  </body>
+</html>

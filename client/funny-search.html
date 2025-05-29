@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sarcastic Hotel Search - Hotel Booking</title>
@@ -9,60 +8,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Sarcastic Hotel Search</h1>
     <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="ai-assistant.html" class="nav-link">AI Assistant</a>
-        <a href="funny-search.html" class="nav-link active">Funny Search</a>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="ai-assistant.html" class="nav-link">AI Assistant</a>
+      <a href="funny-search.html" class="nav-link active">Funny Search</a>
     </div>
 
     <div class="search-container">
-        <div class="search-intro">
-            <p>Looking for hotels but tired of boring search results? Try our sarcastic hotel search! 
-            We'll find you great hotels while making fun of your travel choices.</p>
+      <div class="search-intro">
+        <p>
+          Looking for hotels but tired of boring search results? Try our sarcastic hotel search! We'll find you great
+          hotels while making fun of your travel choices.
+        </p>
+      </div>
+
+      <div class="search-form-container">
+        <div class="input-group">
+          <label for="location">Where are you going?</label>
+          <input type="text" id="location" class="input-bk" placeholder="City, Country (e.g. Paris, FR)" />
         </div>
 
-        <div class="search-form-container">
-            <div class="input-group">
-                <label for="location">Where are you going?</label>
-                <input type="text" id="location" class="input-bk" placeholder="City, Country (e.g. Paris, FR)" />
-            </div>
-            
-            <div class="input-group">
-                <label for="check-in">Check-in Date:</label>
-                <input type="date" id="check-in" class="input-bk" />
-            </div>
-            
-            <div class="input-group">
-                <label for="check-out">Check-out Date:</label>
-                <input type="date" id="check-out" class="input-bk" />
-            </div>
-            
-            <div class="input-group">
-                <label for="guests">Number of Guests:</label>
-                <input type="number" id="guests" class="input-bk" min="1" value="2" />
-            </div>
-            
-            <button class="price-btn mt-0" onclick="searchHotelsWithHumor()">Search & Prepare for Mockery</button>
+        <div class="input-group">
+          <label for="check-in">Check-in Date:</label>
+          <input type="date" id="check-in" class="input-bk" />
         </div>
 
-        <div id="loader" class="hidden">Searching and crafting sarcastic remarks... Please wait.</div>
-
-        <div id="humor-response" class="humor-container hidden">
-            <h2>Your Travel Agent Says:</h2>
-            <div id="humor-content" class="humor-content"></div>
+        <div class="input-group">
+          <label for="check-out">Check-out Date:</label>
+          <input type="date" id="check-out" class="input-bk" />
         </div>
 
-        <div id="hotel-results" class="hotel-results hidden">
-            <h2>Hotels We Found (Despite Our Better Judgment)</h2>
-            <div id="hotels-container" class="hotels-container"></div>
+        <div class="input-group">
+          <label for="guests">Number of Guests:</label>
+          <input type="number" id="guests" class="input-bk" min="1" value="2" />
         </div>
+
+        <button class="price-btn mt-0" onclick="searchHotelsWithHumor()">Search & Prepare for Mockery</button>
+      </div>
+
+      <div id="loader" class="hidden">Searching and crafting sarcastic remarks... Please wait.</div>
+
+      <div id="humor-response" class="humor-container hidden">
+        <h2>Your Travel Agent Says:</h2>
+        <div id="humor-content" class="humor-content"></div>
+      </div>
+
+      <div id="hotel-results" class="hotel-results hidden">
+        <h2>Hotels We Found (Despite Our Better Judgment)</h2>
+        <div id="hotels-container" class="hotels-container"></div>
+      </div>
     </div>
 
     <script src="funny-search.js"></script>
-</body>
-
-</html> 
+  </body>
+</html>
